@@ -212,7 +212,7 @@ public class CityWeatherPage extends Fragment {
     public void queryWeather() {
         Map<String, Object> params = new HashMap<>();//组合参数
         params.put("city", cityWeather.getCityName());
-        params.put("key", "b5a48875066798b0620911733464a1d3");
+        params.put("key", "******"); //填写在聚合数据申请的天气接口key
         String queryParams = urlEncode(params);
         String response = doGet(apiURL, queryParams);
         try {
