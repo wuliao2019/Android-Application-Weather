@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/temperature0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+
+                <TextView
+                    android:id="@+id/dotC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="℃"
+                    android:textColor="@color/white_words"
+                    android:textSize="40sp"
+                    app:layout_constraintStart_toEndOf="@+id/temperature0"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/temperature0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="48dp"
+                    android:text="18"
+                    android:textColor="@color/white_words"
+                    android:textSize="88sp"
+                    app:layout_constraintBottom_toTopOf="@+id/temperature2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/temperature2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="--℃ / --℃"
+                    android:textColor="@color/white_words"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/weather"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/temperature0" />
+
+                <TextView
+                    android:id="@+id/weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="多云"
+                    android:textColor="@color/white_words"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/temperature2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="风速"
+                        android:textColor="@color/white_words" />
+
+                    <ImageView
+                        android:id="@+id/windIcon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="20dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_wind_speed"
+                        app:tint="@color/white_words" />
+
+                    <TextView
+                        android:id="@+id/power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="3 级"
+                        android:textColor="@color/white_words"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/direct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="西北风"
+                        android:textColor="@color/white_words" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/white_words" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="湿度"
+                        android:textColor="@color/white_words" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="20dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_humidity"
+                        app:tint="@color/white_words" />
+
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="98%"
+                        android:textColor="@color/white_words"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/humidity2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="舒适"
+                        android:textColor="@color/white_words" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/white_words" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="空气质量"
+                        android:textColor="@color/white_words" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="20dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_aqi"
+                        app:tint="@color/white_words" />
+
+                    <TextView
+                        android:id="@+id/aqi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="AQI 128"
+                        android:textColor="@color/white_words"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/aqi2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="严重污染"
+                        android:textColor="@color/white_words" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/day1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="今天"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="明天"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="后天"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="两天后"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="三天后"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/day1_icon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_cloudy_sunny" />
+
+                <ImageView
+                    android:id="@+id/day2_icon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_rain" />
+
+                <ImageView
+                    android:id="@+id/day3_icon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_rain_heavy" />
+
+                <ImageView
+                    android:id="@+id/day4_icon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_snow_shower" />
+
+                <ImageView
+                    android:id="@+id/day5_icon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_rain_storm" />
+            </LinearLayout>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="36dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/day1_icon2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_cloudy_sunny" />
+
+                <ImageView
+                    android:id="@+id/day2_icon2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_rain" />
+
+                <ImageView
+                    android:id="@+id/day3_icon2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_rain_heavy" />
+
+                <ImageView
+                    android:id="@+id/day4_icon2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_snow_shower" />
+
+                <ImageView
+                    android:id="@+id/day5_icon2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_rain_storm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/day1_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day2_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day3_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day4_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/day5_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white_words"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="更新时间：1970年1月1日"
+                android:textColor="@color/white_words"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:indeterminateTint="#7C4DFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
