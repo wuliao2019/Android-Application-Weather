@@ -13,7 +13,7 @@ Android-PickerView:4.1.9
 
 hellocharts-library:1.5.8@aar
 
-天气信息来源：聚合数据天气预报API
+天气信息来源：聚合数据天气预报API（请在聚合数据https://www.juhe.cn/docs/api/id/73 申请key并替换app/src/main/java/com/cqu/weather/ui/CityWeatherPage.java第215行中的“******”）
 
 (源码和资源在app/src/main)
 
